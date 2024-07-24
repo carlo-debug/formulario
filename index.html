@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negociações</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="text-center mt-4 mb-4">Cadastro de Negociações</h1>
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <form id="formCadastro" class="needs-validation" novalidate>
+                    <div class="form-group">
+                        <label for="identificador">Identificador</label>
+                        <input type="number" id="identificador" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Por favor, preencha o identificador.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="data">Data</label>
+                        <input type="date" id="data" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Por favor, selecione a data.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Por favor, preencha o nome.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantidade">Quantidade</label>
+                        <input type="number" id="quantidade" class="form-control" min="1" value="1" required>
+                        <div class="invalid-feedback">
+                            Por favor, insira uma quantidade válida.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="valor">Valor</label>
+                        <input type="number" id="valor" class="form-control" min="0.01" step="0.01" value="0.0" required>
+                        <div class="invalid-feedback">
+                            Por favor, insira um valor válido (mínimo 0.01).
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <button class="btn btn-primary mr-2" id="btnSalvar" type="submit">Salvar</button>
+                        <button class="btn btn-secondary" type="reset">Limpar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-10 mx-auto">
+                <table class="table table-hover table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Identificador</th>
+                            <th>Data</th>
+                            <th>Nome</th>
+                            <th>Quantidade</th>
+                            <th>Valor</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody id="corpoDaTable">
+                        <!-- Aqui serão adicionadas as linhas da tabela dinamicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js e jQuery (opcional, para certos componentes do Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Seu script personalizado -->
+    <script src="js/cadastro.js"></script>
+</body>
+</html>
+<!--Explicações das Melhorias:
+Meta viewport: Adicionado para garantir que o site seja responsivo em dispositivos móveis.
+
+Classes Bootstrap:
+
+container-fluid: Utilizado no <div> principal para ocupar toda a largura disponível.
+row e col-md-6: Utilizados para criar uma estrutura de grid responsiva para o formulário e a tabela.
+text-center, mt-4, mb-4, etc.: Classes de utilidade do Bootstrap para alinhar texto, adicionar margens, etc.
+Formulário:
+
+needs-validation e novalidate: Utilizados para desabilitar a validação padrão do navegador e adicionar validação customizada com Bootstrap.
+form-group e form-control: Classes do Bootstrap para estilizar e organizar campos de formulário.
+invalid-feedback: Utilizado para mostrar mensagens de erro customizadas quando os campos não são preenchidos corretamente.
+Tabela:
+
+table, table-hover, table-bordered, thead-dark: Classes do Bootstrap para estilizar a tabela, cabeçalho e interação com o mouse.
+Botões:
+
+btn btn-primary, btn-secondary: Classes do Bootstrap para estilizar os botões de salvar e limpar.
+Scripts Bootstrap:
+
+Importação das bibliotecas JavaScript necessárias do Bootstrap (jQuery e Popper.js, além do próprio Bootstrap JS).
+Essas melhorias garantem que a página seja estilizada de acordo com as diretrizes do Bootstrap de forma consistente e responsiva, melhorando a experiência do usuário e simplificando o desenvolvimento. Certifique-se de ajustar os links para os arquivos CSS e JavaScript de acordo com o seu ambiente de desenvolvimento.
+
+
+
+ -->
